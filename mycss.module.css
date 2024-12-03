@@ -1,0 +1,12 @@
+.special{
+    color: #00ff73;
+    width: 300px;
+    height: 100px;
+    background-color: 3px solid red;
+    border: 3px solid greenyellow;
+    transition: transform 2s;
+    margin:auto;
+}
+.special:hover{
+    transform: rotateY(320deg);
+}

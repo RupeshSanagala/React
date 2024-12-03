@@ -1,0 +1,137 @@
+3/12/24
+------------
+React:
+----------
+It is a js library
+It is used to create rich user interface.
+It craetes Single page Application.
+It is developed by facebook.
+it uses virtual DOM.
+Logic code is written using XML+Javascript.
+It is faster than angular.js
+Data-Binding is one way.
+
+Technologies required:
+----------------------
+html , css , js(basic,es5,es6,oops)
+
+S/W required:
+---------------
+node js (node -v)
+vscode
+
+How to create react project:
+-----------------------------
+1.by using npm: we have to install configuration file
+   step1: npm install -g create-react-app
+   step2: create-react-app appname
+   step3: cd appname
+   step4: npm start
+2.by using npx:No need to install configuration file
+   step1: npx create-react-app appname
+3.by using vite: It craetes project with minimum package.
+
+how to start react project:
+----------------------------
+npm start
+
+how to display react project:
+---------------------------
+http://localhost:3000
+------------------------
+
+react folder structure:
+--------------------------
+node_modules: all the dependencies and dev-dependencies will install in this folder.
+------------
+package.json: all dependencies entry will found in this folder.
+------------
+
+package-lock.json: detail description of file will be founder here
+------------------
+
+README.md: It is like manual for users, how to handle with react project
+---------
+
+.gitignore: we mention file name in the dependencies sections to ignore, while pushing the project into github.
+-----------
+
+public: It conatins static data in it.
+---------
+
+**********************************
+react is a component basis technology
+
+component:
+-------------
+it is a partial part of react project.
+we reuse  react component throughout react project.
+
+In react App.js is a root component
+1.function component: when your main focus is on UI Design.
+2.class component: when you have to implement complex logic, in that case we use this.
+
+how to display component output.
+
+JSX(Javascript+XML):
+------------------------
+
+It allows us to write html code in react.
+It makes react code easy, in jsx we have wraped multiple element inside one parent element.
+parent element must be any block element like div,h1-h6,p etc....
+
+props:
+-------
+---->It is a parameter or functional parameter which is used to pass data inside component.
+---->props return data in object format.
+---->we can access props in function component by writting props.propName.
+---->we can access props in class component by writting this.props.propName.
+
+methods and events in react:
+================================
+
+state:
+------
+It is used to handle essential in class component.
+It returns object type of data.
+In class component we write state inside constructor.
+
+Note: If you wnat to use state in function component for that we use useState Hook.
+
+setState:
+------------
+It is used to manipulate state data inside class component.
+
+Task:
+------
+create a class component with name MyCounterComp having state with property count =0, you have to implement logic to increment,decrement and reset count value after click there button.
+
+How to use bootstrap in react:
+-----------------------------------
+step1: npm i bootstrap
+step2: go to index.js file and imports its path(import 'bootstrap/dist/css/bootstrap.min.css')
+step3: use bootstrap
+
+render: display component output or view on browser.
+
+
+conditional rendering:
+========================
+display component on the basis of conditional
+----------------------------------------------------
+
+1.use of if else: If condition is true then if will execute otherwise else will execute.
+2.element as variable: In variable we store data and display inside tag and return it.
+3.use of ternary operator: short hand syntax for if else
+syntax: (condition) ? truepart : falsepart;
+4.use of short-circuit:if condition is true then and only then it display output.
+
+how to style using css in react:
+-----------------------------------------
+
+there are 3 ways:
+-------------------
+1. Internal css:
+2. External css:
+3. module css:
+
