@@ -71,7 +71,9 @@ In react App.js is a root component
 1.function component: when your main focus is on UI Design.
 2.class component: when you have to implement complex logic, in that case we use this.
 
-how to display component output.
+how to display component output:
+-------------------------------------
+import path of component to app.js and metion that component inside a div element.
 
 JSX(Javascript+XML):
 ------------------------
@@ -92,11 +94,11 @@ methods and events in react:
 
 state:
 ------
-It is used to handle essential in class component.
+It is used to handle essential data in class component.
 It returns object type of data.
 In class component we write state inside constructor.
 
-Note: If you wnat to use state in function component for that we use useState Hook.
+Note: If you want to use state in function component for that we use useState Hook.
 
 setState:
 ------------
@@ -117,7 +119,7 @@ render: display component output or view on browser.
 
 conditional rendering:
 ========================
-display component on the basis of conditional
+display component output on the basis of conditional
 ----------------------------------------------------
 
 1.use of if else: If condition is true then if will execute otherwise else will execute.
@@ -133,5 +135,286 @@ there are 3 ways:
 -------------------
 1. Internal css:
 2. External css:
-3. module css:
+3. Module css: It is used when we have to write design for particular component.
 
+
+======================================================================================
+4/12/24
+
+Fragment in react:
+-----------------------
+It is an alternative option for jsx.
+It remove unwanted element from DOM hierarchy.
+
+component Interaction:
+------------------------
+access data from parent comp to child component.
+while performing component interfaction in between component they must have parent child relation by importing childcomp to parentcomp.
+component in parent component and then write child component name as tag in parent component.
+
+we can achieve:
+-----------------
+passing state data as props
+passing function data as props
+
+#Pure Component:
+-----------------
+It is used to avoid unnecessary re - rendering of parent class data in child component when data is same.
+It can be done by performing shallow comparision.
+to achieve this we have to extend child class component with pureclass component.
+
+React.Memo(componentName):
+---------------------------
+It is used to prevent unnecessary re-rendering function component by performing shallow comparision
+To achieve this we have to pass function component name as a argument to React.memo() method.
+
+HOC(Higher Order Function):
+-----------------------------------
+when we have to share same business logic with multiple component in that case we use it.
+In this we share business logic from function component to class or function component.
+
+ErrorBoundary:
+===============
+It is a react component which is used to handle error while rendering of component in browser.
+-------------->To handle it we use two class component life cycle method
+
+1.getDerivedStateFromError():
+-----------------------------------
+It is a static method and executes automatically when error occurs in child component
+when error occur in component it executes automatically.
+
+2.componentDidCatch():
+-----------------------
+It will display error log(error information)
+
+Virtual DOM:
+--------------
+Instead of manipulating Browser DOM internally react creates virtual memory , where it does all the necessary changes.
+react render that code which needs to change only,that's why react is faster.
+
+===============================================================================================
+
+5/12/24
+
+routing in react:
+======================
+navigation of component.
+by writting routing path name in browser url to display component output or view.
+we use react-router-dom library in react to perform routing.
+
+How to install react-router-dom
+---------------------------------
+npm install react-router-dom@6
+
+1.createBrowserDOM(): 
+-----------------------------
+it is a method which takes array type of data(object data)
+In its object we use two property:
+-----------------------------------
+1.path
+2.element
+
+In this method we define all types of routing:
+------------------------------------------------
+
+2.RouterProvider():
+-------------------------------
+it helps us to render output of all routing component on browser.
+
+
+Types of routing:
+---------------------
+1. naming routing:
+------------------------
+display component output after writting component routing path name in browser url.
+
+2. default routing:
+--------------------------
+leaving path name empty, and giving element component will result.
+
+3. parameterize routing:
+-------------------------
+display component output after passing parameter with routing path name
+
+4. child routing:
+---------------
+display one routing inside another routing.
+to perform child routing we use children property in object which array of object value.
+to display child routing output we have to add "<Outlet>" library in parent routing component
+
+5. wild-card routing(*):
+--------------------------
+when user write wrong path name in browser url then we decide what component output should display.
+in wild card routing path we write path value as "*".
+Imp: Wild card routing always should write at last, and below routing it will never work.
+
+src folder
+   - Hooks folder
+      ReactHooksComp(fc)
+      UseStateHooksComp(fc)
+   -MainRouting folder
+      routing.js file
+   -layout folder
+     LoginComp(Fc)
+     NavComp(Fc)
+     FooterComp(Fc)
+     PageNotFoundComp(Fc)
+     MainDashboardComp(Fc)
+
+     How to create layout for react project:
+     --------------------------------------
+
+     Class component LifeCycle method:
+     ==================================
+     Class component comes with four phases:
+     -----------------------------------------------
+     1.Mounting Phase: when component initialize.
+     -------------------
+      flow of execution in class component:
+      ---------------------------------------
+       -constructor: when class object initialize constructor get execute automatically.
+       -getDerivedStateFromProps: it is static method which execute automatically, and it is used to set value coming from props to state
+       -render: It is responsible to display component data on browser.
+       -componentDidMount: It is used to manipulate data in browser after render method get executed.
+
+     2.Update Phase: when DOM manipulation is done.
+     ----------------
+      -shouldComponentUpdate:
+      ---------------------------- 
+      It decide whether component will update or not.
+      It returns boolean value.
+      if it is true , that means component get updated
+      -getSnapShotbeforeUpdate: 
+      ---------------------------
+      It returns previous data of props and state before updation of it.
+
+      -render:It is responsible to display component data on browser.
+
+      -componentDidUpdate: It will return updated values of state and props.
+     
+
+     3.Unmounting Phase: when component is deleted
+     -------------------
+     -componentWillunmount:
+     -------------------------
+      It is just call before component deleted, it is used to disconnect component connection with other component.
+
+     4.Error Phase:
+     -----------------
+     -getDerivedStateFromError(): It execute automatically when error occur in component
+     -componentDidCatch(): It return error log.
+
+     React/redux extension for shortcut of creating components:
+     ---------------------------------------------------------------
+     -rfce: create normal function component
+     -rafce: create arrow function component
+     -rce: create a class component
+     -rconst: creates a constructor in component
+
+     Hooks in React:
+     ---------------------
+
+     it allows us to use class component feature in function component
+     By using Hooks we can use state in function component
+     In react Hooks introduced in react-version 16
+
+     rules to use hooks:
+     --------------------------
+     Hooks work only in function component.
+     Hooks always use in top-level component
+     hooks can not be render conditionally.
+
+     Types of Hooks:
+     -------------------
+
+     1.useState Hook:
+     2.useEffect Hook:
+     3.useContext Hook:
+     4.useRef Hook:
+     5.useReducer Hook:
+     6.useCallback Hook:
+     7.useMemo Hook:
+
+     1.useState Hook:
+     -----------------
+     If you want to use state in function component for that ypu have to use useState hook.
+     It returns two values:
+       1.currentState
+       2.function-to-update-stateData
+     Before using it, import it first from react library.
+ 
+     syntax:   const [currentState,functionToUpdateState] = useState(value);
+
+   2.useEffect Hook: It will execute after component render data.
+   ------------------
+   It will handle work of componentDidMount,componentDidUpdate,componentWillUnMount in function
+   It takes two values:
+    1.call back function
+    2.dependencies
+   
+   syntax: useEffect(()=>{},dependencies);
+
+   when we use:
+   =================
+   case 1: when no dependencies is passed:
+          useEffect will execute recursuivel;y infinite times.
+          syntax: useEffect(()=>{});
+   case 2: When we pass dependencies value as a blank array.
+         syntax: useEffect(()=>{},[]);
+   case 3: When we have to execute useEffect hook as per our requirment.
+         we pass value in dependencies
+         syntax: useEffect(()=>{},dependencies); // dependencies can be props or state
+
+Task: create a  new react project 
+
+6/12/24
+-----------
+
+validation for dropdown
+
+CRUD:
+--------
+REST Fake API:
+Axios library: it is used to make request from react app to server.
+
+how to install axios:
+------------------------
+npm install axios
+
+json-server: It is dummy server, which server environment to database
+
+cmd: npm install json-server
+
+How to start and json-server and upload db.json
+--------------------------------------------------------
+
+cd src/shared/database(press enter)
+
+npx json-server --watch -p 9999 db.json(press enter)
+
+src folder
+   CRUD folder
+      -ProductDashComp (fc)
+      -ProductAddComp (fc)
+      -ProductEditComp (fc)
+
+GET request:
+---------------
+To fetch data from server to client.
+
+*Material UI:
+-------------------------
+It provide inbuilt component, which makes react project attractive and it also provides icon.
+website: www.mui.com
+
+How to install MUI:
+-------------------------
+npm install @mui/material @emotion/react @emotion/styled
+
+How to install MUI icon:
+-------------------------
+npm install @mui/icons-material
+
+
+UseNavigate Hook:
+----------------

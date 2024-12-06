@@ -1,0 +1,51 @@
+{
+  "products": [
+    {
+      "id": "102",
+      "pname": "Mobile",
+      "price": 10000,
+      "Brand": "Vivo",
+      "Quantity": 2000
+    },
+    {
+      "id": "103",
+      "pname": "Car",
+      "price": 1000000,
+      "Brand": "TATA",
+      "Quantity": 100
+    },
+    {
+      "id": "104",
+      "pname": "Bike",
+      "price": 200000,
+      "Brand": "Royal Enfield",
+      "Quantity": 500
+    },
+    {
+      "id": "105",
+      "pname": "AC",
+      "price": 20000,
+      "Brand": "voltas",
+      "Quantity": 50
+    },
+    {
+      "id": "1267",
+      "pname": "mobile",
+      "price": "12000",
+      "Brand": "redmi",
+      "Quantity": "10"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "usermail": "admin@gmail.com",
+      "userpass": "admin@123"
+    },
+    {
+      "id": "2",
+      "usermail": "user@gmail.com",
+      "userpass": "user@123"
+    }
+  ]
+}
